@@ -1,7 +1,8 @@
 doctype html
 html
   head
-    title Join the #{community} community on Slack!
+    title SA Tech
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
     style.
       body {
         padding: 50px;
@@ -12,9 +13,18 @@ html
         width: 400px;
       }
   body
-    h1 Join the #{community} community on Slack!
-    form(method="POST", action="/invite")#join-form
-      input(type="text", name="email", placeholder="Enter your email")#slack-email
+     
+    center
+      h1 SA Tech
+    div(class="container well")
+      h2 Join the Slack Team
+      form(method="POST" action="/invite")#join-form  
+        div(class="row")
+          div(class='col-sm-10')
+            input(type="text", style="width:100%" name="email", placeholder="Enter your email")#slack-email
+            
+          div(class='col-sm-2')
+            button(class="btn btn-large btn-primary" type="submit") Send Invite
     script.
       var form = document.getElementById('join-form');
       var email = document.getElementById('slack-email')
